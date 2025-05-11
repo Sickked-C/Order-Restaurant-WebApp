@@ -1,0 +1,251 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+h1,
+h2 {
+  color: #343a40;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  cursor: pointer;
+  border-radius: 36px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Tổng thể ứng dụng */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+/* Tiêu đề menu */
+.menu-title {
+  font-size: 2rem;
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+/* Bố cục chính */
+.content-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr; /* Lọc - Sản phẩm - Đơn đặt */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Phần lọc sản phẩm */
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 180px; /* Điều chỉnh chiều rộng để vừa với nội dung */
+  align-self: flex-start; /* Căn chỉnh khung lọc với khung sản phẩm */
+}
+
+/* Thanh tìm kiếm và lọc giá */
+.search-and-price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  flex: 1; /* Thanh tìm kiếm chiếm toàn bộ không gian còn lại */
+}
+
+.search-container input {
+  width: 100%;
+  max-width: 300px; /* Giới hạn chiều rộng tối đa */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Bộ lọc giá */
+.price-filter-container {
+  display: flex;
+  gap: 10px;
+}
+
+.price-filter-container button {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.price-filter-container button:hover {
+  background-color: #0056b3;
+}
+
+.price-filter-container select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #007bff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.price-filter-container select:hover {
+  background-color: #f0f8ff;
+}
+
+/* Phần lọc con (subcategory) */
+.sub-filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 10px; /* Thụt vào để phân biệt với nút chính */
+}
+
+.sub-filter-container button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: 1px solid #007bff;
+  border-radius: 15px;
+  background-color: #0d882e;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sub-filter-container button:hover {
+  background-color: #5a6268;
+}
+
+/* Phần sản phẩm */
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cột sản phẩm */
+  gap: 20px;
+}
+
+.menu-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-item button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item button:hover {
+  background-color: #218838;
+}
+
+/* Phần đơn đặt hàng */
+.order-container {
+  background-color: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex: 1; /* mở rộng chiều cao nếu cần */
+}
+
+.order-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-list li {
+  margin-bottom: 10px; /* Giãn cách giữa các đơn đặt */
+}
+
+.confirm-button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-button:hover {
+  background-color: #0056b3;
+}

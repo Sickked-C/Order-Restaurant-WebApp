@@ -1,0 +1,5 @@
+{% extends "admin/change_list.html" %} {% block content %}
+<div class="total-price-summary" style="margin-bottom: 15px; font-size: 16px">
+  <strong>Tổng tiền tất cả đơn hàng đang lọc:</strong> {{ total_price_sum }}
+</div>
+{{ block.super }} {% endblock %}
