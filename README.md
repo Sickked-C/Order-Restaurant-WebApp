@@ -38,7 +38,7 @@ cd Order-Restaurant-WebApp
 Navigate to the backend folder and run:
 
 ```bash
-cd backend
+cd restaurant_order_backend
 python -m venv env
 env\Scripts\activate  # On Windows
 pip install -r requirements.txt
@@ -61,7 +61,7 @@ python manage.py runserver
 In a new terminal window:
 
 ```bash
-cd frontend
+cd restaurant-order-frontend
 npm install
 npm start
 ```
