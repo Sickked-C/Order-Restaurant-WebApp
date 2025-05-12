@@ -10,7 +10,6 @@ It allows customers to place orders online and restaurant admins to manage them 
 - 🧾 User authentication and login system
 - 📋 Menu display and order creation
 - 🛒 Cart functionality for customers
-- 📊 Admin dashboard for managing orders
 - 🌐 Deployed version hosted on Railway (deployment URLs may differ from local setup)
 
 ---
